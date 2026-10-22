@@ -1,0 +1,24 @@
+{
+  "name": "career-building-academy-test",
+  "version": "1.0.0",
+  "description": "Career Building Academy Shahdadkot - Computer Notes Test",
+  "author": "Career Building Academy Shahdadkot",
+  "main": "main.js",
+  "scripts": { "start": "electron .", "build:win": "electron-builder --win" },
+  "dependencies": {
+    "@capacitor/android": "^6.1.0",
+    "@capacitor/cli": "^6.1.0",
+    "@capacitor/core": "^6.1.0"
+  },
+  "devDependencies": {
+    "electron": "22.3.27",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.careerbuilding.test",
+    "productName": "Career Building Academy",
+    "files": ["main.js", "www/**/*"],
+    "win": { "target": [{ "target": "nsis", "arch": ["x64", "ia32"] }] },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "createDesktopShortcut": true }
+  }
+}

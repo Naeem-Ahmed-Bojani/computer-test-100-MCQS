@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Career Building Academy Shahdadkot</title>
+<style>
+:root{--bg:#eef2fb;--card:#fff;--tx:#14213d;--mut:#647089;--pri:#3b5bdb;--pri2:#6d83ff;--bd:#d9e1f2;--ok:#2b9348;--bad:#d62839;--okbg:#e5f6ea;--badbg:#fde8ea;--sel:#eaefff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1424;--card:#172038;--tx:#eaf0ff;--mut:#9aa7c7;--pri:#6d83ff;--pri2:#8fa0ff;--bd:#2a3556;--okbg:#14301f;--badbg:#3a171c;--sel:#1f2b50}}
+:root[data-theme="dark"]{--bg:#0e1424;--card:#172038;--tx:#eaf0ff;--mut:#9aa7c7;--pri:#6d83ff;--pri2:#8fa0ff;--bd:#2a3556;--okbg:#14301f;--badbg:#3a171c;--sel:#1f2b50}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--tx);font-family:"Segoe UI",Roboto,Arial,sans-serif;-webkit-text-size-adjust:100%}
+.wrap{max-width:640px;margin:0 auto;padding:18px 14px 40px}
+.brand{text-align:center;margin:10px 0 18px}
+.logo{width:64px;height:64px;border-radius:20px;margin:0 auto 10px;background:linear-gradient(135deg,var(--pri),var(--pri2));color:#fff;font-size:30px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(59,91,219,.35)}
+h1{font-size:22px;margin:0 0 4px}.sub{color:var(--mut);font-size:14px;margin:0}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:20px;box-shadow:0 6px 24px rgba(20,33,61,.08)}
+.screen{display:none}.screen.on{display:block}
+label{display:block;font-size:13px;font-weight:600;margin:14px 0 6px;color:var(--mut)}
+input,select{width:100%;padding:14px;font-size:16px;border:1.5px solid var(--bd);border-radius:12px;background:var(--card);color:var(--tx);outline:none}
+input:focus,select:focus{border-color:var(--pri)}
+.btn{display:block;width:100%;margin-top:20px;padding:15px;font-size:16px;font-weight:700;color:#fff;border:0;border-radius:12px;cursor:pointer;background:linear-gradient(135deg,var(--pri),var(--pri2))}
+.btn.alt{background:var(--sel);color:var(--pri);margin-top:10px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.err{color:var(--bad);font-size:14px;margin-top:12px;min-height:18px}
+.top{display:flex;justify-content:space-between;font-size:14px;color:var(--mut);font-weight:600}
+.bar{height:8px;background:var(--bd);border-radius:8px;margin:10px 0 18px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pri),var(--pri2));transition:width .25s}
+.q{font-size:19px;font-weight:700;line-height:1.45;margin:0 0 16px}
+.opt{display:flex;align-items:center;width:100%;text-align:left;gap:12px;padding:14px;margin-bottom:10px;font-size:16px;color:var(--tx);background:var(--card);border:1.5px solid var(--bd);border-radius:14px;cursor:pointer}
+.opt b{flex:none;width:30px;height:30px;border-radius:50%;background:var(--sel);color:var(--pri);display:flex;align-items:center;justify-content:center;font-size:14px}
+.opt.sel{border-color:var(--pri);background:var(--sel)}
+.opt.sel b{background:var(--pri);color:#fff}
+.score{width:150px;height:150px;border-radius:50%;margin:6px auto 14px;background:linear-gradient(135deg,var(--pri),var(--pri2));color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.score span{font-size:46px;font-weight:800;line-height:1}.score small{font-size:14px;opacity:.9}
+.c{text-align:center}.info{font-size:14px;color:var(--mut);line-height:1.7;margin:10px 0}
+.rv{margin-top:14px;max-height:50vh;overflow:auto}
+.rv div{padding:10px 12px;margin-bottom:8px;border-radius:12px;background:var(--badbg);font-size:14px;line-height:1.5}
+.rv em{font-style:normal;color:var(--ok);font-weight:700}
+.wrap.wide{max-width:980px}.tabs{display:flex;gap:8px}.tab{flex:1;padding:12px;border-radius:12px;border:1.5px solid var(--bd);background:var(--card);color:var(--mut);font-weight:700;font-size:15px;cursor:pointer}.tab.on{background:var(--sel);color:var(--pri);border-color:var(--pri)}
+.mini{padding:8px 12px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font-size:13px;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:14px}
+.stu{text-align:left;padding:14px;border-radius:16px;border:1.5px solid var(--bd);background:var(--card);color:var(--tx);cursor:pointer}.stu b{display:block;font-size:16px}.stu small{color:var(--mut)}.stu .bar{margin:10px 0}
+.row{display:flex;justify-content:space-between;align-items:center;font-size:12px}.row em{font-style:normal;color:var(--mut)}
+.chip{padding:3px 10px;border-radius:20px;font-weight:700;font-size:12px}.chip.live{background:var(--okbg);color:var(--ok)}.chip.ok{background:var(--sel);color:var(--pri)}.chip.idle{background:var(--badbg);color:var(--bad)}
+h3{font-size:15px;margin:18px 0 8px}#dcur .opt{pointer-events:none}
+.lg div{padding:10px 12px;margin-bottom:8px;border-radius:12px;font-size:14px;line-height:1.5}.good{background:var(--okbg)}.bad2{background:var(--badbg)}
+</style></head><body>
+<div class="wrap" id="wrap">
+<div class="brand"><div class="logo">&#128187;</div><h1>Career Building Academy Shahdadkot</h1><p class="sub">Computer Notes Test &bull; 100 MCQs</p></div>
+
+<div class="card screen on" id="s1">
+<div class="tabs"><button class="tab on" id="tabS" type="button">Student Login</button><button class="tab" id="tabT" type="button">Teacher Login</button></div>
+<label for="u">Username</label><input id="u" autocomplete="username" placeholder="Enter username">
+<label for="p">Password</label><input id="p" type="password" autocomplete="current-password" placeholder="Enter password">
+<div class="err" id="e1"></div>
+<button class="btn" id="b1">Login</button>
+</div>
+
+<div class="card screen" id="s2">
+<h1 style="font-size:19px">Student Details</h1><p class="sub">Please fill in your details to begin the test.</p>
+<label for="n">Name</label><input id="n" placeholder="Your name">
+<label for="f">Father Name</label><input id="f" placeholder="Father name">
+<label for="c">Caste</label><input id="c" placeholder="Caste">
+<label for="t">Shift Time</label>
+<select id="t"><option value="">Select shift</option><option>3:00 To 4:00</option><option>4:00 To 5:00</option><option>5:00 To 6:00</option><option>6:00 To 7:00</option></select>
+<div class="err" id="e2"></div>
+<button class="btn" id="b2">Next &rarr; Start Test</button>
+</div>
+
+<div class="card screen" id="s3">
+<div class="top"><span id="qn">Question 1 / 100</span><span id="qs"></span></div>
+<div class="bar"><i id="pg"></i></div>
+<p class="q" id="qt"></p>
+<div id="ops"></div>
+<button class="btn" id="b3" disabled>Next</button>
+</div>
+
+<div class="card screen" id="s5">
+<div class="top"><span id="tc"></span><span><button class="mini" id="b8" type="button">Clear All</button> <button class="mini" id="b7" type="button">Logout</button></span></div>
+<h1 style="font-size:19px;margin-top:14px">Teacher Dashboard</h1>
+<p class="sub">Tap any student to watch their test live.</p>
+<div class="grid" id="grid"></div></div>
+<div class="card screen" id="s6">
+<button class="mini" id="b9" type="button">&larr; All Students</button>
+<h1 id="dh" style="font-size:20px;margin:14px 0 4px"></h1><p class="sub" id="di"></p>
+<div class="bar"><i id="dp"></i></div>
+<h3>Live Screen</h3><div id="dcur"></div>
+<h3>Answers</h3><div id="dlog" class="lg"></div></div>
+<div class="card screen" id="s4">
+<div class="c"><div class="score"><span id="sc">0</span><small>out of 100</small></div>
+<h1 id="rm"></h1><div class="info" id="ri"></div></div>
+<button class="btn" id="b4">Show Wrong Answers</button>
+<div class="rv" id="rv" style="display:none"></div>
+<button class="btn alt" id="b5">Start New Test (New Questions)</button>
+<button class="btn alt" id="b6">Logout</button>
+</div>
+</div>
+<script>
+(function(){
+var STU={u:"student",p:"1234"},TCH={u:"teacher",p:"admin123"},TOTAL=100;
+/* Paste your Firebase Realtime Database URL here for live sync across devices, e.g. "https://your-project-default-rtdb.firebaseio.com" */
+var CFG="";CFG=CFG.replace(/\/$/,"");
+var ABBR="CPU=Central Processing Unit;RAM=Random Access Memory;ROM=Read-Only Memory;USB=Universal Serial Bus;WWW=World Wide Web;LAN=Local Area Network;WAN=Wide Area Network;HTTP=Hyper Text Transfer Protocol;HTTPS=Hyper Text Transfer Protocol Secure;IP=Internet Protocol;ISP=Internet Service Provider;URL=Uniform Resource Locator;PDF=Portable Document Format;HTML=Hyper Text Markup Language;VPN=Virtual Private Network;SIM=Subscriber Identity Module;ATM=Automated Teller Machine;SMS=Short Message Service;MMS=Multimedia Messaging Service;GPS=Global Positioning System;JPEG=Joint Photographic Experts Group;PNG=Portable Network Graphics;GIF=Graphics Interchange Format;ASCII=American Standard Code for Information Interchange;OS=Operating System;AI=Artificial Intelligence;ICT=Information and Communication Technology;IoT=Internet of Things;DBMS=Database Management System;SQL=Structured Query Language;CAD=Computer Aided Design;OCR=Optical Character Recognition;DVD=Digital Versatile Disc;CD=Compact Disc;HDD=Hard Disk Drive;SSD=Solid State Drive;GUI=Graphical User Interface;CLI=Command Line Interface;OSI=Open Systems Interconnection;FTP=File Transfer Protocol;VR=Virtual Reality;CCTV=Closed Circuit Television;LED=Light Emitting Diode;LCD=Liquid Crystal Display;HDMI=High-Definition Multimedia Interface;VGA=Video Graphics Array;GPU=Graphics Processing Unit;ALU=Arithmetic Logic Unit;BIOS=Basic Input Output System;Wi-Fi=Wireless Fidelity".split(";");
+var KEYS="Copy=Ctrl + C;Paste=Ctrl + V;Cut=Ctrl + X;Undo=Ctrl + Z;Redo=Ctrl + Y;Save=Ctrl + S;Print=Ctrl + P;Select All=Ctrl + A;Find=Ctrl + F;New File=Ctrl + N;Open File=Ctrl + O;Close=Ctrl + W;Refresh=F5;Rename=F2;Permanent Delete=Shift + Delete;Switching between apps=Alt + Tab;Lock Computer=Windows + L;Minimize All=Windows + D;File Explorer=Windows + E;Task Manager=Ctrl + Shift + Esc".split(";");
+var EXT="Word documents=.docx;Excel files=.xlsx;PowerPoint files=.pptx;a PDF file=.pdf;an image file=.jpg;an audio file=.mp3;a video file=.mp4".split(";");
+var POOLS={S2:["Firewall","Encryption","Decryption","Spam","Authentication","Authorization","Regular Backup","Piracy"],SW:["System Software","Application Software","Utility Software","Firmware"],HT:["Input Devices","Output Devices","Processing Devices","Storage Devices"],CT:["Desktop","Laptop","Tablet","Server"],FT:["High Speed","Accuracy","No Intelligence","Multitasking","Storage"],B:["Data","Information","Program","Hardware"]};
+var IT=[
+"S|Unauthorized access to a system is called|Hacking","S|The act of sending fake emails to steal data is|Phishing","S|A person who breaks into systems for malicious reasons is|Black Hat Hacker","S|A person who hacks ethically to find weaknesses is|White Hat Hacker","S|The process of encoding data for protection is|Encryption","S|The process of decoding encrypted data is|Decryption","S|A security barrier that monitors network traffic is|Firewall","S|The process of verifying a user’s identity is|Authentication","S|The process of confirming user permissions is|Authorization","S|The method to prevent data loss is|Regular Backup","S|The illegal activity of copying digital content is|Piracy","S|The type of cyber-attack that floods a server with traffic is|DDoS Attack","S|The unwanted email messages are called|Spam","S|The software that protects against viruses is|Antivirus Software",
+"S2|A malicious program that replicates itself is|Virus","S2|A program that hides inside other software is|Trojan Horse","S2|A self-replicating program that spreads across networks is|Worm","S2|Software designed to harm or disrupt computers is|Malware","S2|Software that collects user data secretly is|Spyware","S2|Software that shows unwanted ads is|Adware","S2|The malware that locks files for ransom is|Ransomware","S2|The malicious software that records keystrokes is|Keylogger",
+"X|A strong password should include|Letters, Numbers, and Symbols|Only Letters;Only Numbers;Only Your Name",
+"X|The computer virus spreads through|Infected files and emails|Keyboard and Mouse;Monitor;Speakers",
+"D|The device used to input text into a computer is|Keyboard","D|The device used to print documents is|Printer","D|The output device used to display images is|Monitor","D|The device used to point, click, and drag is|Mouse","D|The device used to scan documents is|Scanner","D|The main circuit board of the computer is|Motherboard",
+"X|The device that connects a computer to the internet is|Modem|Monitor;Scanner;Motherboard","X|The device used to connect different networks is|Router|Printer;Scanner;Keyboard","X|The device used to connect computers within a network is|Switch|Printer;Monitor;Mouse","X|The permanent storage device in a computer is|Hard Disk|RAM;Cache memory;Monitor","X|The device used to backup data is|External Hard Drive|Monitor;Scanner;Keyboard","X|The computer used for complex scientific calculations is|Supercomputer|Tablet;Laptop;Desktop Computer","X|The type of computer that fits on a desk is|Desktop Computer|Supercomputer;Server;Tablet","X|The computer used by one person at a time is|Personal Computer|Supercomputer;Server;Mainframe Computer","X|The main input devices are|Keyboard and Mouse|Monitor and Printer;Monitor and Speakers;Printer and Scanner","X|The main output devices are|Monitor and Printer|Keyboard and Mouse;Mouse and Scanner;Keyboard and Scanner",
+"X|Cache memory is faster than|RAM|ROM;Hard Disk;Floppy Disk","X|The cache is located between|CPU and Main Memory|Monitor and Keyboard;Hard Disk and Printer;Mouse and CPU","X|The main purpose of cache memory is|To speed up data access|To store data permanently;To print documents;To protect from viruses","X|Cache memory is a type of|High-speed memory|Permanent memory;Optical memory;Printer memory","X|Cache memory stores|Frequently used data and instructions|Only deleted files;Only images;Only passwords","X|The main memory of a computer is|RAM|Hard Disk;Bit;Scanner","X|The permanent memory of a computer is|ROM|RAM;Cache memory;Bit","X|The temporary memory used by running programs is|RAM|ROM;Hard Disk;Scanner","X|The memory that loses data when power is turned off is|Volatile Memory|Non-Volatile Memory;Read-Only Memory;Permanent Memory","X|The memory that retains data even when power is off is|Non-Volatile Memory|Volatile Memory;Cache Memory;Temporary Memory","X|The device used to store data permanently without power is|ROM|RAM;Cache memory;Monitor","X|The device used for long-term data storage is|Hard Drive|RAM;Cache memory;CPU","X|The storage area where data is temporarily held is|Cache memory|Hard Disk;ROM;Motherboard","X|The temporary Internet files are called|Cache|Recycle Bin;Root Directory;Firewall","X|The smallest unit of data in a computer is|Bit|Byte;Kilobyte;Megabyte","X|Eight bits make one|Byte|Bit;Kilobyte;Megabyte","X|The smallest addressable unit of memory is|Byte|Bit;Kilobyte;Megabyte","X|1 Kilobyte (KB) is equal to|1024 Bytes|1024 Kilobytes;1024 Megabytes;1024 Gigabytes","X|1 Megabyte (MB) is equal to|1024 Kilobytes|1024 Bytes;1024 Megabytes;1024 Gigabytes","X|1 Gigabyte (GB) is equal to|1024 Megabytes|1024 Bytes;1024 Kilobytes;1024 Terabytes","X|The unit used to measure computer speed is|Hertz (Hz)|Byte;Pixel;Watt","X|The main function of the ALU is|Perform arithmetic and logic operations|Store data permanently;Print documents;Connect to internet","X|The brain of the computer is|CPU|RAM;Monitor;Keyboard",
+"T|The software used to browse the Internet is|Web Browser","T|The area where deleted files are stored temporarily is|Recycle Bin","T|The main folder in Windows is called|Root Directory","T|The first web browser was|Mosaic","T|The address used to identify a computer on a network is|IP Address","T|The unique name used to identify a website is|Domain Name","T|The process of starting a computer is called|Booting","T|The main page of a website is called|Homepage","T|The person who writes computer programs is|Programmer","T|The bar that shows open applications in Windows is|Taskbar",
+"X|A collection of related data is called|Database|Compiler;Taskbar;Homepage","X|The software used to manage databases is called|DBMS|Compiler;Taskbar;Booting","X|Google Chrome, Firefox, and Edge are|Web Browsers|Operating Systems;Programming Languages;Databases","X|The programs and operating information used by a computer are called|Software|Hardware;Firmware;Data","X|The physical parts of a computer are called|Hardware|Software;Program;Data","X|The operating system acts as an interface between user and|Hardware|Internet;Browser;Database","X|A program that manages computer hardware is|Operating System|Compiler;Web Browser;Taskbar","X|Windows, Linux, and macOS are examples of|Operating Systems|Web Browsers;Programming Languages;Databases","X|The main function of an operating system is|Manage hardware and software|Print documents;Browse the internet;Scan documents","X|The default browser in Windows is|Microsoft Edge|Google Chrome;Firefox;Mosaic","X|The company that created Windows OS is|Microsoft|Apple;Google;Facebook","X|The computer language that uses 0s and 1s is|Machine Language|Assembly Language;C language;HTML","X|The language that uses mnemonic codes is|Assembly Language|Machine Language;Python;HTML","X|High-level languages are converted into machine code using|Compiler|Taskbar;Modem;Firewall","X|The computer language used to write system software is|C language|HTML;SQL;Mosaic","X|The first electronic computer was|ENIAC|Mosaic;Windows;Modem",
+"P|Who invented the telephone?|Alexander Graham Bell","P|Who invented the internet?|Vint Cerf & Bob Kahn","P|Who is called the father of the computer?|Charles Babbage","P|Who invented the mouse?|Douglas Engelbart","P|Who developed the Python programming language?|Guido van Rossum","P|The founder of Microsoft is|Bill Gates","P|The founder of Apple is|Steve Jobs","P|The founder of Facebook is|Mark Zuckerberg","P|The founder of Google is|Larry Page and Sergey Brin","P|The first mechanical computer was invented by|Charles Babbage",
+"G|The 1st Generation of computers (1940–1956) used|Vacuum Tubes","G|The 2nd Generation of computers (1956–1963) used|Transistors","G|The 3rd Generation of computers (1964–1971) used|Integrated Circuits (ICs)","G|The 4th Generation of computers (1971–Present) used|Microprocessors","G|The 5th Generation of computers (Present & Beyond) uses|Artificial Intelligence",
+"SW|Software that controls the basic functions of a computer is|System Software","SW|MS Word, Excel, and Photoshop are examples of|Application Software","SW|Antivirus and Disk Cleanup are examples of|Utility Software","SW|Windows and Linux are examples of|System Software",
+"HT|Devices used to enter data into the computer are|Input Devices","HT|Devices used to show the result or output from the computer are|Output Devices","HT|Devices used to process the input data are|Processing Devices",
+"CT|A computer for desk use is a|Desktop","CT|A portable computer is a|Laptop","CT|A touchscreen portable device is a|Tablet","CT|A computer that provides data and services to other computers is a|Server",
+"FT|A computer gives correct results with very few mistakes. This feature is|Accuracy","FT|A computer cannot think by itself. This feature is|No Intelligence","FT|A computer can do many tasks at the same time. This feature is|Multitasking","FT|A computer can save large amounts of data. This feature is|Storage","FT|A computer works at a very fast speed. This feature is|High Speed",
+"B|Raw facts and figures are called|Data","B|Processed and organized data is called|Information","B|A set of instructions given to the computer to perform a task is a|Program"
+];
+function $(i){return document.getElementById(i)}
+function shuf(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
+function mk(q,a,pool){var d=shuf(pool.filter(function(x){return x!==a})).slice(0,3);return{q:q,a:a,o:shuf([a].concat(d))}}
+function pairs(arr){return arr.map(function(s){var i=s.indexOf("=");return[s.slice(0,i),s.slice(i+1)]})}
+function build(){var pools={},k,L=[];for(k in POOLS)pools[k]=POOLS[k];
+IT.forEach(function(s){var p=s.split("|");if(p[0]!=="X"&&!POOLS[p[0]]){pools[p[0]]=pools[p[0]]||[];if(pools[p[0]].indexOf(p[2])<0)pools[p[0]].push(p[2])}});
+IT.forEach(function(s){var p=s.split("|");if(p[0]==="X")L.push({q:p[1],a:p[2],o:shuf([p[2]].concat(p[3].split(";")))});else L.push(mk(p[1],p[2],pools[p[0]]))});
+var A=pairs(ABBR),F=A.map(function(x){return x[1]});A.forEach(function(x){L.push(mk("What is the full form of "+x[0]+"?",x[1],F))});
+var K=pairs(KEYS),KK=K.map(function(x){return x[1]});K.forEach(function(x){L.push(mk("Which shortcut key is used for "+x[0]+"?",x[1],KK))});
+var E=pairs(EXT),EE=E.map(function(x){return x[1]});E.forEach(function(x){L.push(mk("The file extension of "+x[0]+" is",x[1],EE))});
+return shuf(L).slice(0,TOTAL)}
+var S={},Q=[],idx=0,pick=-1,ans=[],score=0,done=false,sid="";
+function go(id){var s=document.querySelectorAll(".screen");for(var i=0;i<s.length;i++)s[i].className="card screen";$("wrap").className="wrap"+(id==="s5"||id==="s6"?" wide":"");$(id).className="card screen on";window.scrollTo(0,0)}
+var role="s";function setRole(r){role=r;$("tabS").className="tab"+(r==="s"?" on":"");$("tabT").className="tab"+(r==="t"?" on":"");$("e1").textContent=""}
+$("tabS").onclick=function(){setRole("s")};$("tabT").onclick=function(){setRole("t")};
+$("b1").onclick=function(){var c=role==="s"?STU:TCH;if($("u").value.trim()===c.u&&$("p").value===c.p){$("e1").textContent="";if(role==="s")go("s2");else{go("s5");startPoll()}}else $("e1").textContent="Wrong username or password."};
+$("p").onkeydown=function(e){if(e.keyCode===13)$("b1").onclick()};
+$("b2").onclick=function(){S={n:$("n").value.trim(),f:$("f").value.trim(),c:$("c").value.trim(),t:$("t").value};
+if(!S.n||!S.f||!S.c||!S.t){$("e2").textContent="Please fill in all fields.";return}$("e2").textContent="";start()};
+function start(){Q=build();idx=0;ans=[];score=0;done=false;sid=Date.now().toString(36)+Math.random().toString(36).slice(2,6);go("s3");show()}
+function show(){var q=Q[idx];pick=-1;$("qn").textContent="Question "+(idx+1)+" / "+Q.length;$("pg").style.width=(idx/Q.length*100)+"%";
+$("qt").textContent=/\?$/.test(q.q)?q.q:q.q+" ______";var h=$("ops");h.innerHTML="";
+q.o.forEach(function(o,i){var b=document.createElement("button");b.className="opt";b.type="button";b.innerHTML="<b>"+"ABCD".charAt(i)+"</b><span></span>";b.lastChild.textContent=o;
+b.onclick=function(){pick=i;var all=h.children;for(var j=0;j<all.length;j++)all[j].className="opt"+(j===i?" sel":"");$("b3").disabled=false;sync()};h.appendChild(b)});
+$("b3").disabled=true;$("b3").textContent=idx===Q.length-1?"Finish & See Result":"Next";sync()}
+$("b3").onclick=function(){if(pick<0)return;ans[idx]=Q[idx].o[pick];if(ans[idx]===Q[idx].a)score++;idx++;if(idx<Q.length)show();else finish()};
+function finish(){done=true;sync();go("s4");$("sc").textContent=score;var p=score/Q.length*100;
+$("rm").textContent=p>=80?"Excellent!":p>=60?"Good job!":p>=40?"Keep practicing":"Needs more practice";
+$("ri").innerHTML="";var d=[["Name",S.n],["Father Name",S.f],["Caste",S.c],["Shift",S.t],["Correct",score],["Wrong",Q.length-score]];
+d.forEach(function(x){var r=document.createElement("div");r.textContent=x[0]+": "+x[1];$("ri").appendChild(r)});
+$("rv").style.display="none";$("b4").textContent="Show Wrong Answers"}
+$("b4").onclick=function(){var v=$("rv");if(v.style.display==="block"){v.style.display="none";this.textContent="Show Wrong Answers";return}
+v.innerHTML="";var n=0;Q.forEach(function(q,i){if(ans[i]!==q.a){n++;var d=document.createElement("div");d.innerHTML="<span></span><br>Your answer: <span></span><br>Correct: <em></em>";var s=d.getElementsByTagName("span"),e=d.getElementsByTagName("em");s[0].textContent=(i+1)+". "+q.q;s[1].textContent=ans[i];e[0].textContent=q.a;v.appendChild(d)}});
+if(!n)v.textContent="All answers are correct. Great!";v.style.display="block";this.textContent="Hide Wrong Answers"};
+$("b5").onclick=start;
+$("b6").onclick=function(){stopPoll();setRole("s");$("u").value="";$("p").value="";$("n").value="";$("f").value="";$("c").value="";$("t").value="";go("s1")};
+var DB={put:function(id,o){if(CFG){try{fetch(CFG+"/sessions/"+id+".json",{method:"PUT",body:JSON.stringify(o)}).catch(function(){})}catch(e){}}else{try{var m=JSON.parse(localStorage.getItem("cbas")||"{}");m[id]=o;localStorage.setItem("cbas",JSON.stringify(m))}catch(e){}}},
+all:function(cb){if(CFG){fetch(CFG+"/sessions.json").then(function(r){return r.json()}).then(function(d){cb(d||{})}).catch(function(){})}else{try{cb(JSON.parse(localStorage.getItem("cbas")||"{}"))}catch(e){cb({})}}},
+clear:function(cb){if(CFG){fetch(CFG+"/sessions.json",{method:"DELETE"}).then(cb).catch(function(){})}else{try{localStorage.removeItem("cbas")}catch(e){}cb()}}};
+function sync(){if(!sid)return;var lg=[];for(var i=0;i<ans.length;i++)if(ans[i]!=null)lg.push({q:Q[i].q,a:Q[i].a,p:ans[i]});
+var cur=idx<Q.length?{q:Q[idx].q,o:Q[idx].o,p:pick}:null;
+DB.put(sid,{n:S.n,f:S.f,c:S.c,t:S.t,i:idx,tot:Q.length,s:score,d:done,cur:cur,lg:lg,ts:Date.now()})}
+var T=null,data={},openId=null;
+function startPoll(){openId=null;pull();T=setInterval(pull,3000)}
+function stopPoll(){if(T)clearInterval(T);T=null}
+function pull(){DB.all(function(d){data=d;if(openId)drawDetail();else drawList()})}
+function st(d){return d.d?["Finished","ok"]:(Date.now()-d.ts<180000?["Live","live"]:["Idle","idle"])}
+function drawList(){var g=$("grid");g.innerHTML="";var ids=Object.keys(data).sort(function(a,b){return data[b].ts-data[a].ts});
+$("tc").textContent=ids.length+" student"+(ids.length===1?"":"s")+" \u2022 "+(CFG?"Online sync":"Offline mode (this device only)");
+if(!ids.length){g.innerHTML='<p class="sub">No students yet. They appear here when they start the test.</p>';return}
+ids.forEach(function(id){var d=data[id],s=st(d),b=document.createElement("button");b.type="button";b.className="stu";
+b.innerHTML='<b></b><small></small><div class="bar"><i></i></div><div class="row"><span></span><em></em></div>';
+b.querySelector("b").textContent=d.n;b.querySelector("small").textContent=d.f+" \u2022 "+d.t;b.querySelector("i").style.width=(d.i/d.tot*100)+"%";
+var c=b.querySelector("span");c.textContent=s[0];c.className="chip "+s[1];b.querySelector("em").textContent="Q "+Math.min(d.i+1,d.tot)+"/"+d.tot+" \u2022 Score "+d.s;
+b.onclick=function(){openId=id;go("s6");drawDetail()};g.appendChild(b)})}
+function drawDetail(){var d=data[openId];if(!d)return;var s=st(d);$("dh").textContent=d.n;
+$("di").textContent="Father: "+d.f+" \u2022 Caste: "+d.c+" \u2022 Shift: "+d.t+" \u2022 "+s[0]+" \u2022 Score "+d.s+"/"+d.tot;$("dp").style.width=(d.i/d.tot*100)+"%";
+var c=$("dcur");c.innerHTML="";if(d.cur){var q=document.createElement("p");q.className="q";q.textContent="Q"+(d.i+1)+". "+d.cur.q;c.appendChild(q);
+(d.cur.o||[]).forEach(function(o,i){var x=document.createElement("div");x.className="opt"+(i===d.cur.p?" sel":"");x.innerHTML="<b>"+"ABCD".charAt(i)+"</b><span></span>";x.lastChild.textContent=o;c.appendChild(x)})}
+else c.textContent="Test finished. Final score: "+d.s+" / "+d.tot;
+var l=$("dlog");l.innerHTML="";var lg=d.lg||[];for(var k=lg.length-1;k>=0;k--){var r=lg[k],x=document.createElement("div");x.className=r.p===r.a?"good":"bad2";
+x.textContent=(k+1)+". "+r.q+" \u2192 "+r.p+(r.p===r.a?"  \u2714":"  \u2718 (Correct: "+r.a+")");l.appendChild(x)}}
+$("b9").onclick=function(){openId=null;go("s5");drawList()};
+$("b7").onclick=$("b6").onclick;
+$("b8").onclick=function(){if(confirm("Delete all student records?"))DB.clear(function(){data={};drawList()})};
+})();
+</script></body></html>
